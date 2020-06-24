@@ -19,3 +19,5 @@ FROM debian
 RUN apt update && apt -y upgrade && apt install -y ca-certificates pgbackrest
 COPY --from=builder /build/pgbackrest/src/pgbackrest /usr/bin/pgbackrest
 
+ENTRYPOINT [ "sleep" ]
+CMD ["infinity"]
